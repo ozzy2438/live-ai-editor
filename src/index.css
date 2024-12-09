@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#343541];
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .code-block {
+    @apply bg-[#1a1b26] rounded-md p-4 font-mono text-sm my-4 overflow-x-auto border border-gray-700;
+  }
+}
+
+.typing-effect {
+  border-right: 2px solid transparent;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #6366f1 }
+}
